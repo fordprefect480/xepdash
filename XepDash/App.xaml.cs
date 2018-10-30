@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using Autofac;
+using System;
+using System.Reflection;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace XepDash
+namespace XepDash.UI
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
     {
+        public static IContainer Container { get; set; }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -30,6 +24,8 @@ namespace XepDash
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            Container = SetUpDependencies();
         }
 
         /// <summary>
@@ -71,6 +67,17 @@ namespace XepDash
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+
+            SetUpDependencies();
+        }
+
+        private IContainer SetUpDependencies()
+        {
+            var builder = new ContainerBuilder();
+            builder.RegisterAssemblyTypes(Assembly.Load(new AssemblyName("XepDash.Infrastructure")))
+                   .AsImplementedInterfaces();
+
+            return builder.Build();
         }
 
         /// <summary>

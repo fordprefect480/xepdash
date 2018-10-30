@@ -1,2 +1,14 @@
 
 \.vs/
+
+XepDash/bin/
+
+XepDash/obj/
+
+XepDash\.Business/bin/
+
+XepDash\.Business/obj/
+
+XepDash\.Data/bin/
+
+XepDash\.Data/obj/
