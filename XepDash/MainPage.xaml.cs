@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -21,7 +22,6 @@ namespace XepDash.UI
         public MainPage()
         {
             this.InitializeComponent();
-
             this._settingsService = App.Container.Resolve<ISettingsService>();
             this._slideService = App.Container.Resolve<ISlideService>();
 
@@ -70,16 +70,8 @@ namespace XepDash.UI
 
         private void LoadSlideData()
         { 
-            var slides = _slideService.GetSlides();
-
-            // clear current items
-            fv.Items.Clear();
-
-            foreach (var slide in slides)
-            {
-                var n = new Random().Next(1000);
-                fv.Items.Add(new { Name = n.ToString(), Image = "http://placekitten.com/" + n + "/" + n});
-            }            
+            var slides = _slideService.GetSlides().ToList();
+            slides.ForEach(s => fv.Items.Add(s));
         }
     }
 }

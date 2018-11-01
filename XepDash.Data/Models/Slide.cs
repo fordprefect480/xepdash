@@ -1,23 +1,59 @@
-﻿using System;
-using XepDash.Core;
+﻿using XepDash.Core;
 
 namespace XepDash.Infrastructure
 {
-    public class Slide : ISlide
+    public class SlideOne : ISlide
     {
-        public Slide()
+        public SlideOne()
         {
 
         }
-        public int Id { get; set; }
         public int OrderIndex { get; set; }
         public string ImageUri { get; set; }
-        public bool IsActive { get; set; }
-        public string XamlPage { get; set; }
+        public string DataTemplateName { get; set; }
+        public string Name { get; set; }
 
         public void LoadData()
         {
-            //throw new NotImplementedException();
+            Name = "One";
+            ImageUri = "http://placekitten.com/720/730";
+        }
+    }
+
+    public class SlideTwo : ISlide
+    {
+        public SlideTwo()
+        {
+
+        }
+        public int OrderIndex { get; set; }
+        public string ImageUri { get; set; }
+        public string DataTemplateName { get; set; }
+        public string Name { get; set; }
+
+        public void LoadData()
+        {
+            Name = "Two";
+            ImageUri = "http://placekitten.com/500/500";
+        }
+    }
+
+
+    public class SlideThree : ISlide
+    {
+        public SlideThree()
+        {
+
+        }
+        public int OrderIndex { get; set; }
+        public string ImageUri { get; set; }
+        public string DataTemplateName { get; set; }
+        public string Name { get; set; }
+
+        public void LoadData()
+        {
+            Name = "Three";
+            ImageUri = "http://placekitten.com/610/640";
         }
     }
 }

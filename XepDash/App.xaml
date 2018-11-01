@@ -4,4 +4,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:XepDash">
 
+    <Application.Resources>
+        <DataTemplate x:Key="SlideOne">
+            <Grid>
+                <Image Stretch="UniformToFill" Source="{Binding ImageUri}"/>
+                <Border Background="#A5000000" Height="80" VerticalAlignment="Bottom">
+                    <TextBlock Text="{Binding Name}" 
+                                FontFamily="Segoe UI" FontSize="26.667" 
+                                Foreground="#CCFFFFFF" Padding="15,20"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate  x:Key="SlideTwo">
+            <Grid>
+                <Image Stretch="UniformToFill" Source="{Binding ImageUri}"/>
+                <Border Background="#A5000000" Height="80" VerticalAlignment="Top">
+                    <TextBlock Text="{Binding Name}" 
+                                FontFamily="Segoe UI" FontSize="26.667" 
+                                Foreground="#CCFFFFFF" Padding="15,20"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate  x:Key="SlideThree">
+            <Grid>
+                <Image Stretch="UniformToFill" Source="{Binding ImageUri}"/>
+                <Border Background="#A5000000" Height="80" VerticalAlignment="Top">
+                    <TextBlock Text="{Binding Name}" 
+                                FontFamily="Segoe UI" FontSize="26.667" 
+                                Foreground="#CCFFFFFF" Padding="15,20"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </Application.Resources>
 </Application>
