@@ -16,3 +16,11 @@ XepDash\.Data/obj/
 XepDash\.UI/bin/
 
 XepDash\.UI/obj/
+
+XepDash\.Core/bin/
+
+XepDash\.Core/obj/
+
+XepDash\.Infrastructure/bin/
+
+XepDash\.Infrastructure/obj/
