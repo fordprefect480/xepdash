@@ -1,4 +1,5 @@
-﻿using XepDash.Core;
+﻿using System;
+using XepDash.Core;
 
 namespace XepDash.Infrastructure
 {
@@ -15,8 +16,10 @@ namespace XepDash.Infrastructure
 
         public void LoadData()
         {
+            var x = new Random().Next(100, 1000);
+
             Name = "One";
-            ImageUri = "http://placekitten.com/720/730";
+            ImageUri = "http://placekitten.com/" + x + "/" + x;
         }
     }
 
@@ -33,8 +36,10 @@ namespace XepDash.Infrastructure
 
         public void LoadData()
         {
+            var x = new Random().Next(100, 1000);
+
             Name = "Two";
-            ImageUri = "http://placekitten.com/500/500";
+            ImageUri = "http://placekitten.com/" + x + "/" + x;
         }
     }
 
@@ -52,8 +57,10 @@ namespace XepDash.Infrastructure
 
         public void LoadData()
         {
+            var x = new Random().Next(100, 1000);
+
             Name = "Three";
-            ImageUri = "http://placekitten.com/610/640";
+            ImageUri = "http://placekitten.com/" + x + "/" + x;
         }
     }
 }

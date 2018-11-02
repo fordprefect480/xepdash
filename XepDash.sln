@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XepDash.UI", "XepDash\XepDash.UI.csproj", "{246038C4-A9CC-4EA7-A8A5-6277E10EA302}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XepDash.UI", "XepDash.UI\XepDash.UI.csproj", "{246038C4-A9CC-4EA7-A8A5-6277E10EA302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XepDash.Core", "XepDash.Business\XepDash.Core.csproj", "{BE9D8FA0-34A4-494F-9134-3E25F5257DDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XepDash.Core", "XepDash.Core\XepDash.Core.csproj", "{BE9D8FA0-34A4-494F-9134-3E25F5257DDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XepDash.Infrastructure", "XepDash.Data\XepDash.Infrastructure.csproj", "{DEB78B24-D7C2-4CCE-BB60-73CAA067ADAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XepDash.Infrastructure", "XepDash.Infrastructure\XepDash.Infrastructure.csproj", "{DEB78B24-D7C2-4CCE-BB60-73CAA067ADAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

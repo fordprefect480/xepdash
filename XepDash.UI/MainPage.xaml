@@ -10,7 +10,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Page.Resources>
-        <local:ImplicitDataTemplateConverter x:Key="ImplicitDataTemplateConverter" />
         <local:SlideDataTemplateSelector
             x:Key="SlideDataTemplateSelector"
             SlideOne="{StaticResource SlideOne}"
